@@ -1,7 +1,14 @@
 {
     "en": {
         "translations": {
-            "title": "Wired Beauty"
+            "title": "Wired Beauty",
+            "login": "login"
+        }
+    },
+    "fr": {
+        "translations": {
+            "title": "Wired Beauty",
+            "login": "connexion"
         }
     }
 }
