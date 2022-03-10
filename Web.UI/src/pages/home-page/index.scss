@@ -1,5 +1,7 @@
 :root {
     --base-color: rgba(176, 212, 214, 1);
+    --gray-color: #E5E5E5;
+    --theme-color: rgba(176, 212, 214, 1);
 
 }
 
@@ -19,13 +21,15 @@
 }
 
 .container-howWeWork{
-    height: 50vh;
+    height: 60vh;
     background-color: #FDFDFD;
 
     .title-components{
-        color: var(--base-color);
-        font-size: 40px;
+        color: var(--gray-color);
+        font-size: 20px;
     }
     .subtitle-components{
+        color: var(--theme-color);
+        font-size: 40px;
     }
 }

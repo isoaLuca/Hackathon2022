@@ -9,7 +9,14 @@
             "navbar.our.devices": "Our devices",
             "navbar.who.we.are": "Who we are",
             "navbar.scientific.validation": "Scientific validation",
-            "navbar.studies": "Studies & Services"
+            "navbar.studies": "Studies & Services",
+            "home": "Home",
+            "home.section.1": "Our Technology",
+            "home.section.1.text": "Our technology allows us to obtain a number of consumer returns far superior to tests that would be done in laboratories. With broader data, which will help laboratories in their product studies.",
+            "home.section.1.ellipse.1": "Biology",
+            "home.section.1.ellipse.2": "IOT Nomadic Lab",
+            "home.section.1.ellipse.3": "Consumer App",
+            "home.section.1.ellipse.4": "Insanely fast algorythm"
         }
     },
     "fr": {

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { HomeSectionOne } from './HomeSectionOne'
+import { HomeSectionTwo } from './HomeSectionTwo'
 import './index.scss'
 
 export const HomePage = () => {
@@ -12,6 +13,7 @@ export const HomePage = () => {
                 </div>
             </div>
             <HomeSectionOne />
+            <HomeSectionTwo />
         </>
     )
 }
