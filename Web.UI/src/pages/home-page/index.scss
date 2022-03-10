@@ -1,0 +1,31 @@
+:root {
+    --base-color: rgba(176, 212, 214, 1);
+
+}
+
+.home-page{
+    background-image: url('src/assets/img/bg-home.png');
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    white-space: pre-line;
+
+    .container-title{
+        transform: translate(25%, 250%);
+        line-height: 44px;
+        font-style: normal;
+    }
+}
+
+.container-howWeWork{
+    height: 50vh;
+    background-color: #FDFDFD;
+
+    .title-components{
+        color: var(--base-color);
+        font-size: 40px;
+    }
+    .subtitle-components{
+    }
+}

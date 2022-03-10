@@ -1,4 +1,5 @@
 import './App.css'
+import { Navbar, Webinar } from './components'
 import { initInternationalization } from './i18next'
 import MyRoutes from './routes'
 
@@ -9,7 +10,9 @@ function App() {
   return (
     // useContext
     <div className="App">
-      <MyRoutes />
+      <Webinar />
+      <Navbar />
+      <MyRoutes /> 
     </div>
   )
 }

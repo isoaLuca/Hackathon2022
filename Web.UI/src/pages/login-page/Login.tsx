@@ -1,8 +1,12 @@
 import { t } from "i18next"
-import { Form } from "../../components/form/Form"
+import { useDispatch } from "react-redux"
+import { Modal } from "../../components/modal/Modal"
+import { ModalActionType } from "../../redux/reducer/Modal/action"
 import { InputTypes } from "../../types/Inputs"
 
 export const Login = () => {
+
+    const dispatch = useDispatch()
 
     const inputsLogin: InputTypes[] = [
         {
@@ -18,20 +22,21 @@ export const Login = () => {
         },
     ]
 
+    const openModal = () => {
+        dispatch({
+            type: ModalActionType.OPEN,
+            payload: {
+                title: t("login"),
+                content: inputsLogin,
+            }
+        })
+    }
+
     return (
         <>
-            <div className="flex h-screen w-full justify-center items-center rounded">
-                <div className="flex h-3/6 w-3/6 shadow-lg rounded-xl">
-                    <Form 
-                        submitLabel="Login"
-                        inputs={inputsLogin}
-                        defaultValues={inputsLogin}
-                        className="bg-white"
-                        onSubmit={(list: any) => console.log(list.email, list.password)}
-                        noLabel
-                        titleForm={t('login')}
-                    /> 
-                </div>
+            <div className="flex h-screen w-full justify-center items-center">
+                <Modal />
+                <button className="bg-blue-500 w-20 h-12" onClick={() => openModal()}>Login</button>
             </div>
         </>
     )

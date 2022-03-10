@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --base-color: rgba(176, 212, 214, 1);
+    --bg-light-gray: rgba(225, 225, 224, 1);
+    --bg-heavier-gray: rgba(128, 128, 129, 1);
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-routes{
+    flex: 1;
+}

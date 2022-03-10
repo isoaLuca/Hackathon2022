@@ -8,11 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.0",
     "i18next": "^21.6.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.6",
-    "react-router-dom": "^6.2.2"
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.2",
+    "redux": "^4.1.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
@@ -20,6 +23,7 @@
     "@vitejs/plugin-react": "^1.0.7",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.8",
+    "sass": "^1.49.9",
     "tailwindcss": "^3.0.23",
     "typescript": "^4.5.4",
     "vite": "^2.8.0"
