@@ -6,10 +6,6 @@ kernel:
     resource: ../src/Kernel.php
     type: annotation
 
-api_login_check :
+login_check:
     path: /api/login_check
-    
-
-authentication_token:
-    path: /api/login
-    methods: ['POST', 'GET']
+    methods: ['POST']

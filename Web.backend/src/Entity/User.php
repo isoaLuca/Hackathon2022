@@ -13,7 +13,16 @@ use ApiPlatform\Core\Annotation\ApiResource;
  * 
  * @ApiResource(
  *     normalizationContext={"groups"={"user:read"}},
- *     denormalizationContext={"groups"={"user:write"}}
+ *     denormalizationContext={"groups"={"user:write"}},
+ *      collectionOperations={
+ *          "get"={},
+ *          "post"={},
+ *          "create_user"={
+ *              "method"="POST",
+ *              "path"="/users/create",
+ *              "controller"=App\Controller\Api\CreateUser::class
+ *          },
+ *         }     
  * )
  */
 #[ORM\Entity(repositoryClass: UserRepository::class)]
@@ -48,6 +57,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     */
     #[ORM\Column(type: 'string')]
     private $password;
+    /**
+     * @var string The hashed password
+     * @Groups({"user:read", "user:write"})
+    */
+    #[ORM\Column(type: 'string', length: 50)]
+    private $username;
 
     public function getId(): ?int
     {
@@ -58,7 +73,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         return $this->email;
     }
-
+    
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -117,5 +132,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
     }
 }
