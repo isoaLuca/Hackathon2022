@@ -4,9 +4,10 @@ import MyRoutes from './routes'
 
 function App() {
 
-  initInternationalization('en')
+  initInternationalization(navigator.language || 'en')
 
   return (
+    // useContext
     <div className="App">
       <MyRoutes />
     </div>
