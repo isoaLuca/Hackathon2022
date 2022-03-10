@@ -18,7 +18,11 @@
             "home.section.1.ellipse.3": "Consumer App",
             "home.section.1.ellipse.4": "Insanely fast algorythm",
             "home.section.2.title": "DIGITALLY ENABLED LAB & CONSUMER SKINCARE TESTING",
-            "home.section.2": "Our formula combines technological advances and dermatological research. With a key partner such as APHP, we were able to develop with their dermatology specialists this sensor technology which records different data on the condition of the skin to offer studies carried out on a wide audience."
+            "home.section.2": "Our formula combines technological advances and dermatological research. With a key partner such as APHP, we were able to develop with their dermatology specialists this sensor technology which records different data on the condition of the skin to offer studies carried out on a wide audience.",
+            "about.article.1.title": "BeautyTech X Skincare",
+            "about.article.1.content": "WIRED BEAUTY is a new datadriven market research company dedicated to cosmetic laboratories. \n We help our clients evaluate and develop skincare formulae by comparing cosmetics on statistically viable samples of men & women (1000 people) : the antioxydative and moisterizing effect of formulae (in vivo) the antioxydative and moisterizing effect of ingredients (in vitro)  (cf Reach) consumer feedback after product use environmental conditions (UV pollution) surronding the consumer's lifestyle skincare performance after 1 day - 8 days - 15 days - X days.",
+            "about.article.2.subname": "WE RELY ON DATA & TECHNOLOGY",
+            "about.article.2.context": "Proprietary nomadic lab device & patented skin patches to decipher skin reactions and ingredient presence \n Easy multi-lingual smartphone app and customer feedback \n Geolocalisation and exposome data (UV - pollution - temperature)\n Repeatability of protocols in real life conditions (ie bathrooms)\n Large cohorts it needed\n Saas and European data center"
         }
     },
     "fr": {

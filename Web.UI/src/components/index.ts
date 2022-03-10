@@ -5,4 +5,6 @@ export * from './navbar/Navbar';
 export * from './webinar/Webinar';
 export * from './ellipse/Ellipse';
 export * from './article/Article';
+export * from './article/Section';
 export * from './footer/Footer';
+export * from './header/Header';
