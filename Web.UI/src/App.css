@@ -16,3 +16,7 @@
 .container-routes{
     flex: 1;
 }
+
+footer {
+    height: 60vh;
+}

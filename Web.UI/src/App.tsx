@@ -1,5 +1,5 @@
 import './App.css'
-import { Navbar, Webinar } from './components'
+import { Footer, Navbar, Webinar } from './components'
 import { initInternationalization } from './i18next'
 import MyRoutes from './routes'
 
@@ -13,6 +13,7 @@ function App() {
       <Webinar />
       <Navbar />
       <MyRoutes /> 
+      <Footer />
     </div>
   )
 }

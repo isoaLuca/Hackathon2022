@@ -1,10 +1,13 @@
 import { Title } from "../title/Title";
+import { ImageForArticle } from "./ImageForArticle";
+import Line from '../../assets/svg/Line.svg'
 
 interface IArticle {
     title: string;
     content: string;
     img: string;
-    textOnLeft: boolean;
+    textOnLeft?: boolean;
+    text?: string;
 }
 
 export const Article = ({
@@ -12,20 +15,24 @@ export const Article = ({
     content,
     img,
     textOnLeft,
+    text,
 }: IArticle) => {
     return (
         <>
-            <div className="container-article w-full">
-                <div className="items-center flex justify-center w-full h-1/3">
-                    <Title name={title} subName={content} />
+            <div className={`w-full flex justify-center ${!textOnLeft ? 'flex-row-reverse' : ''} `}>
+                <div className="w-1/2 flex justify-start flex-col items-start">
+                    <div className="items-start flex justify-start h-1/3">
+                        <Title name={title} subName={content} bigTitle={false} />
+                    </div>
+                    <div className="flex w-full justify-center h-2/3">
+                        <img src={Line} alt="" className="mr-10"/>
+                        <span className="leading-loose text-left">
+                            {text}
+                        </span>
+                    </div>
                 </div>
-                <div className="flex w-full justify-center -mt-5">
-                    <span className="w-3/6 h-1/6 items-center text-center">
-                        {content}
-                    </span>
-                </div>
-                <div>
-                    <img src={img} alt="" />
+                <div className="flex w-1/2">
+                    <ImageForArticle source={img} grid />
                 </div>
             </div>
         </>

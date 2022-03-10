@@ -19,7 +19,7 @@ export const HomeSectionOne = () => {
 
     return (
         <>
-            <div className="container-howWeWork w-full bg-baseColor-200">
+            <div className="container-howWeWork w-full bg-baseColor-200 mb-20">
                 <div className="items-center flex justify-center w-full h-1/3">
                     <Title name={t('home')} subName={t('home.section.1')} bigTitle/>
                 </div>
@@ -28,8 +28,8 @@ export const HomeSectionOne = () => {
                         {t('home.section.1.text')}
                     </span>
                 </div>
-                <div className='w-full h-3/4 flex justify-center'>
-                    <div className='w-4/6 h-3/4 flex justify-between items-center'>
+                <div className='w-full h-3/4 flex justify-center px-52'>
+                    <div className='w-full h-3/4 flex justify-between items-center'>
                         {titles.map((title, index) => (
                             <Ellipse key={index} svg={ADN} description={title.description} />
                         ))}
