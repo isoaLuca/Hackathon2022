@@ -2,7 +2,14 @@
     "en": {
         "translations": {
             "title": "Wired Beauty",
-            "login": "login"
+            "login": "Login",
+            "title.home.screen": "NEW ! DIFFERENT ! \n BETTER ways to research skincare Hybrid clinical trials and consumer studies",
+            "webinar": "OUR WEBINAR ON ANTIOXYDATIVES - Register here ! TRUST PILOT - Best app for skin care research.",
+            "navbar.what.we.do": "What we do",
+            "navbar.our.devices": "Our devices",
+            "navbar.who.we.are": "Who we are",
+            "navbar.scientific.validation": "Scientific validation",
+            "navbar.studies": "Studies & Services"
         }
     },
     "fr": {

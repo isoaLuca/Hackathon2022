@@ -42,7 +42,6 @@ export const Form = ({
 	return (
 		<>
 			<form className="h-full w-full flex flex-col items-center justify-center">
-				<h1 className="font-bold text-2xl mt-10">{titleForm}</h1>
 				<div className="h-3/4 w-full flex flex-col items-center justify-center">
 					{inputs.map((input: any) => {
 						return (
@@ -55,7 +54,7 @@ export const Form = ({
 									disabled={input.disabled}
 									autoComplete={input.autocomplete}
 									defaultValue={defaultValues[input.name]}
-									className='h-5 py-5 w-full'
+									className='h-5 py-5 w-full border-b'
 									hidden={hide}
 									onChange={handleChange}
 								/>
