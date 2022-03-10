@@ -4,6 +4,8 @@ import LogoWB from '../../assets/svg/LogoWB'
 import { ModalActionType } from '../../redux/reducer/Modal/action';
 import { InputTypes } from '../../types/Inputs';
 import { Modal } from '../modal/Modal';
+import Avatar from '../../assets/svg/person-outline.svg';
+import UK from '../../assets/svg/uk.svg';
 
 interface INavbarElements {
     name: string;
@@ -15,6 +17,8 @@ export const Navbar = () => {
     const { t } = useTranslation()
 
     const dispatch = useDispatch()
+    const isConnected = true
+    const username = 'John Doe'
 
     const inputsLogin: InputTypes[] = [
         {
@@ -57,18 +61,26 @@ export const Navbar = () => {
         })
     }
 
-    const NavbarElements = ({name, link}: INavbarElements) => {
+    const NavbarElements = ({ name, link }: INavbarElements) => {
         return (
-            <span onClick={() => console.log(link)}>
-                <span className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 uppercase mr-8 text-md cursor-pointer hover:text-cyan-400">
+            <div onClick={() => console.log(link)} className='group relative h-20 flex justify-center items-center'>
+                <span className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 uppercase mr-8 text-md cursor-pointer hover:text-baseColor-100 items-center">
                     {name}
                 </span>
-            </span>
+                <div className='hidden group-hover:block bg-white h-92 w-32 absolute translate-y-24 -translate-x-4'>
+                    <div className='w-full h-full flex flex-col items-center justify-center px-2'>
+                        <span className='hover:text-baseColor-100 py-2 cursor-pointer'>item1</span>
+                        <span className='hover:text-baseColor-100 py-2 cursor-pointer'>item1</span>
+                        <span className='hover:text-baseColor-100 py-2 cursor-pointer'>item1</span>
+                        <span className='hover:text-baseColor-100 py-2 cursor-pointer'>item1</span>
+                    </div>
+                </div>
+            </div>
         )
     }
 
     return (
-        <nav className="flex items-center justify-between flex-wrap p-3 shadow-xl">
+        <nav className="flex items-center justify-between flex-wrap p-3 shadow-xl navbar">
             <div className="flex items-center flex-shrink-0 text-white ml-12">
                 <LogoWB width='65' height='65' />
             </div>
@@ -76,14 +88,22 @@ export const Navbar = () => {
                 <div className="text-sm lg:flex-grow flex items-center justify-center">
                     {itemTitle.map((item, index) => <NavbarElements key={index} name={item.name} link={item.link} />)}
                 </div>
-                <div className='bg-gray-600'>
+                <div className='mr-4 cursor-pointer flex w-28 justify-between items-center '>
                     <Modal />
-                    <span 
+                    <span
                         onClick={handleModalLogin}
-                        className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 cursor-pointer"
+                        className="inline-block text-sm leading-none mt-4 lg:mt-0 "
                     >
-                        Sign In
+                        {!isConnected ?
+                            <>
+                                <img src={Avatar} alt="" className='hover:bg-baseColor-100 flex justify-end ml-10' />
+                            </>
+                            : <span className='hover:text-baseColor-100'>{username}</span>
+                        }
                     </span>
+                    <div className='h-10 w-10 rounded-full shadow-md hover:shadow-lg'>
+                        <img src={UK} alt="" className='rounded-full h-10 w-10 bg-cover' />
+                    </div>
                 </div>
             </div>
         </nav>

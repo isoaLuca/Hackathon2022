@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { HomeSectionOne } from './HomeSectionOne'
+import { HomeSectionThree } from './HomeSectionThree'
+import { HomeSectionTwo } from './HomeSectionTwo'
 import './index.scss'
+import { Newletter } from './Newletter'
 
 export const HomePage = () => {
     const { t } = useTranslation()
@@ -12,6 +15,9 @@ export const HomePage = () => {
                 </div>
             </div>
             <HomeSectionOne />
+            <HomeSectionTwo />
+            <HomeSectionThree />
+            <Newletter />
         </>
     )
 }

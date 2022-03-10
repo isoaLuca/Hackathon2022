@@ -1,5 +1,7 @@
 :root {
     --base-color: rgba(176, 212, 214, 1);
+    --gray-color: #E5E5E5;
+    --theme-color: rgba(176, 212, 214, 1);
 
 }
 
@@ -19,13 +21,16 @@
 }
 
 .container-howWeWork{
-    height: 50vh;
+    height: 80vh;
     background-color: #FDFDFD;
+}
 
-    .title-components{
-        color: var(--base-color);
-        font-size: 40px;
-    }
-    .subtitle-components{
+.newletter-container{
+    height: 50vh;
+}
+
+.grid-news{
+    &:before{
+        z-index: -10;
     }
 }
