@@ -2,6 +2,7 @@ import React from "react";
 import Send from '../../assets/svg/send.svg';
 import TriangleBlue from '../../assets/svg/triangle-blue.svg';
 import BigGrid from '../../assets/svg/grille.svg';
+import './index.scss';
 
 export const Newletter = () => {
 
@@ -28,7 +29,7 @@ export const Newletter = () => {
                             </div>
                         </div>
                     </div>
-                    <img src={BigGrid} alt="" className="absolute right-16 mt-28 z-0"/>
+                    <img src={BigGrid} alt="" className="absolute right-16 mt-28 z-0 grid-news"/>
                 </div>
             </div>
         </>

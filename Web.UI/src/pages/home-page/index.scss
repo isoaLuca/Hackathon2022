@@ -28,3 +28,9 @@
 .newletter-container{
     height: 50vh;
 }
+
+.grid-news{
+    &:before{
+        z-index: -10;
+    }
+}
