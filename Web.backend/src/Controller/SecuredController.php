@@ -15,4 +15,18 @@ class SecuredController extends AbstractController
             'controller_name' => 'SecuredController',
         ]);
     }
+
+    #[Route(path: '/api/login', name: 'api_login', methods:['POST'])]
+    public function apiLoginin(){
+        $user = $this->getUser();
+        return $this->json([
+            'roles' => $user->getRoles(),
+                
+            
+        ]); 
+    }
+
+        
+
+
 }

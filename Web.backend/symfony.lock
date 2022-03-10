@@ -120,6 +120,25 @@
     },
     "markbaker/matrix": {
         "version": "3.0.0"
+        
+    "lcobucci/clock": {
+        "version": "2.1.0"
+    },
+    "lcobucci/jwt": {
+        "version": "4.0.4"
+    },
+    "lexik/jwt-authentication-bundle": {
+        "version": "2.14",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.5",
+            "ref": "5b2157bcd5778166a5696e42f552ad36529a07a6"
+        },
+        "files": [
+            "./config/packages/lexik_jwt_authentication.yaml"
+        ]
+
     },
     "monolog/monolog": {
         "version": "2.3.5"
@@ -127,8 +146,13 @@
     "myclabs/deep-copy": {
         "version": "1.11.0"
     },
+
     "myclabs/php-enum": {
         "version": "1.8.3"
+
+    "namshi/jose": {
+        "version": "7.2.3"
+
     },
     "nelmio/cors-bundle": {
         "version": "2.2",
@@ -496,6 +520,9 @@
     "symfony/polyfill-mbstring": {
         "version": "v1.25.0"
     },
+    "symfony/polyfill-php56": {
+        "version": "v1.20.0"
+    },
     "symfony/polyfill-php81": {
         "version": "v1.25.0"
     },
@@ -550,6 +577,15 @@
     },
     "symfony/security-http": {
         "version": "v6.0.5"
+    },
+    "symfony/sendgrid-mailer": {
+        "version": "6.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.4",
+            "ref": "b46e4f8f1adb2864f0aa9c0ff57aea3324a07199"
+        }
     },
     "symfony/serializer": {
         "version": "v6.0.6"
