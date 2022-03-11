@@ -5,9 +5,10 @@ import { Title } from '../title/Title'
 interface SectionTwoProps {
     background: string
     content: string
+    lineSpacing?: string
 }
 
-export const SectionTwo = ({background, content}: SectionTwoProps) => {
+export const SectionTwo = ({background, content, lineSpacing}: SectionTwoProps) => {
     return (
         <>
             <div className=" w-9/12 h-full flex justify-center items-center">
@@ -25,7 +26,7 @@ export const SectionTwo = ({background, content}: SectionTwoProps) => {
                 <div className='w-2/3 h-full flex justify-center items-center'>
                     <div className='h-3/6 bg-white shadow-lg -translate-x-32 translate-y-32 rounded-md w-full py-5 px-5'>
                         <Title name={'What we do'} subName={'We are a team of creative and passionate people who love to create.'}/>
-                        <span className='leading-none'>{content}</span>
+                        <span className={lineSpacing}>{content}</span>
                     </div>
                 </div>
             </div>

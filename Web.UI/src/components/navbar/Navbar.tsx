@@ -41,7 +41,7 @@ export const Navbar = () => {
 
     const itemTitle = [{
         name: t('navbar.what.we.do'),
-        link: '/about',
+        link: '/what-we-do',
     }, {
         name: t('navbar.our.devices'),
         link: '/our-devices'
@@ -76,7 +76,7 @@ export const Navbar = () => {
 
         return (
             <div onClick={() => navigate(link)} className='group relative h-20 flex justify-center items-center'>
-                <span className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 uppercase mr-8 text-md cursor-pointer hover:text-baseColor-100 items-center">
+                <span className="block lg:inline-block lg:mt-0 text-gray-600 uppercase mr-8 text-md cursor-pointer hover:text-baseColor-100 items-center">
                     {name}
                 </span>
                 <div className='hidden group-hover:block bg-white h-92 w-32 absolute translate-y-24 -translate-x-4'>

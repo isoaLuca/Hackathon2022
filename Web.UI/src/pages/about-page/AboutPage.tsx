@@ -24,7 +24,7 @@ export const AboutPage = () => {
                     <Section content={t('about.article.2.context')} title={<Title name={t('navbar.what.we.do')} subName={t('about.article.2.subname')}/>} component={<ImageShadow source={BGArticle2} isBottomRight/>}/>
                 </div>
                 <div className="h-screen bg-baseColor-200 flex justify-center">
-                    <SectionTwo background={BG} content={t('about.article.3.content')}/>
+                    <SectionTwo background={BG} content={t('about.article.3.content')} lineSpacing='leading-none'/>
                 </div>
                 <div className="h-screen">
                     <Section reverse content={t('about.article.5.content')} title={<Title name={t('navbar.what.we.do')} subName={t('about.article.5.title')}/>} component={<ImageShadow source={ArticleBG5} isBottomRight/>}/>
