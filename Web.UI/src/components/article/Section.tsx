@@ -15,7 +15,7 @@ export const Section = ({title, content, component, reverse}: ISection) => {
                             <span className="">{title}</span>
                         </div>
                         <div className="h-96">
-                            <span className="text-left">{content}</span>
+                            <span className="text-left section-content">{content}</span>
                         </div>
                     </div>
                 </div>
