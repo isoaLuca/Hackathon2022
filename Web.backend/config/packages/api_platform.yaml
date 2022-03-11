@@ -3,5 +3,7 @@ api_platform:
         paths: ['%kernel.project_dir%/src/Entity']
     patch_formats:
         json: ['application/merge-patch+json']
+    defaults:
+        pagination_enabled: false    
     swagger:
         versions: [3]

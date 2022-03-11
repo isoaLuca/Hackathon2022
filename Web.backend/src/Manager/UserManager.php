@@ -6,11 +6,16 @@ use App\Entity\User;
 use App\Repository\UserRepository;
 use App\Services\PasswordService;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UserManager
 {
+    /**
+     * @var MailerInterface
+     */
+    protected $mailer;
     /**
      * @var EntityManagerInterface
      */
@@ -37,11 +42,13 @@ class UserManager
     public function __construct(
         EntityManagerInterface $entityManager,
         UserRepository $userRepository,
+        MailerInterface $mailer,
         UserPasswordHasherInterface $userPasswordHasherInterface
     ) {
         $this->em = $entityManager;
         $this->userRepository = $userRepository;
         $this->userPasswordHasherInterface = $userPasswordHasherInterface;
+        $this->mailer = $mailer;
     }
 
 
@@ -78,12 +85,20 @@ class UserManager
     public function registerAccount(User $user)
     {
         $userToPersist = new User();
+        $email = (new Email())
+            ->from('admin@beautyweard.com')
+            ->to($user->getEmail())
+            ->subject('Time for Symfony Mailer!')
+            ->text('Sending emails is fun again!')
+            ->html('<p>See Twig integration for better HTML integration!</p>');
+        //dd($email);    
         $userToPersist->setUsername($user->getUsername());
         $userToPersist->setEmail($user->getEmail());
         $userToPersist->setRoles($user->getRoles());
         $userToPersist->setPassword($this->userPasswordHasherInterface->hashPassword($user, $user->getPassword()));
         $this->em->persist($userToPersist);
         $this->em->flush();
+        $this->mailer->send($email);
 
         return [
             'message' => 'Ok.'
