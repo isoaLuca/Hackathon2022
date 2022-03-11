@@ -32,9 +32,6 @@ export const AboutPage = () => {
                 <div className="h-screen">
                     <Section content={t('about.article.4.content')} title={<Title name={t('navbar.what.we.do')} subName={t('about.article.4.title')} />} component={<ImageShadow source={ArticleBG4} isBottomRight/>} />
                 </div>
-                <div>
-                    <Newletter />
-                </div>
             </div>
         </>
     )

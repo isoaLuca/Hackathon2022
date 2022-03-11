@@ -3,6 +3,7 @@ import { AboutPage, BackOffice, Login } from '../pages'
 import { AboutUsPage } from '../pages/about-us-page/AboutUsPage'
 import { DevicePage } from '../pages/device-page/DevicePage'
 import { HomePage } from '../pages/home-page/HomePage'
+import { SciencePage } from '../pages/scientific-page/SciencePage'
 
 export default function MyRoutes() {
     return (
@@ -14,6 +15,7 @@ export default function MyRoutes() {
             Route: <Route path="/what-we-do" element={<AboutPage />} />
             Route: <Route path="/our-devices" element={<DevicePage />} />
             Route: <Route path="/who-we-are" element={<AboutUsPage />} />
+            Route: <Route path="/scientific-validation" element={<SciencePage />} />
           </Routes>
       </div>
         
