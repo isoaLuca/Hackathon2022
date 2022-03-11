@@ -1,0 +1,13 @@
+.container-car{
+    &::before{
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 100%;
+        transform: translate(-8%, 15%);
+        z-index: -1;
+        background: #B0D4D6;
+        border-radius: 15px;
+        filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    }
+}

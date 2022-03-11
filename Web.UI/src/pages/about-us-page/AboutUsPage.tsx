@@ -24,6 +24,9 @@ import NICO from '../../assets/img/nico.png'
 import RICH from '../../assets/img/richard.png'
 import MEL from '../../assets/img/meliss.png'
 import DUONG from '../../assets/img/duong.png'
+import BGA6 from '../../assets/img/aboutus-bg-a6.png'
+import { Carrousel } from "../../components/carrousel/Carrousel"
+import BGA7 from '../../assets/img/business-people.png'
 
 export const AboutUsPage = () => {
     const { t } = useTranslation()
@@ -165,6 +168,20 @@ export const AboutUsPage = () => {
                             />
                         ))}
                     </div>           
+                </div>
+                <div className="h-screen w-full flex justify-center items-center px-24">
+                    <Article title={t('navbar.who.we.are')} img={BGA6} content={t('aboutus.article.6.title')} text={t('aboutus.article.1.content')}/>
+                </div>
+                <div className="h-96 flex justify-center items-center">
+                    <div className="w-10/12 flex justify-evenly">
+                        <Carrousel title={t('un titre')} content={t('aboutus.carous.1.content')}/>
+                        <Carrousel title={t('un titre')} content={t('aboutus.carous.1.content')}/>
+                        <Carrousel title={t('un titre')} content={t('aboutus.carous.1.content')}/>
+                        <Carrousel title={t('un titre')} content={t('aboutus.carous.1.content')}/>
+                    </div>
+                </div>
+                <div className="h-screen w-full px-24 flex justify-center items-center">
+                    <Article title={t('navbar.who.we.are')} img={BGA7} content={t('aboutus.article.7.title')} text={t('aboutus.article.7.content')}/>        
                 </div>
             </div>
         </>
