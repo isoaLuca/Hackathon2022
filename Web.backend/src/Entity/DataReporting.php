@@ -28,7 +28,25 @@ use Doctrine\ORM\Mapping as ORM;
  *               }, 
  *              "path"="/datareporting/getreportingbyuser",
  *              "controller"=App\Controller\Api\GetUserReportings::class
- *          }
+ *          },
+ *          "post"={
+ *              "method"="POST",
+ *              "openapi_context" = {
+ *                  "parameters" = {
+ *                      {
+ *                          "name" = "userid",
+ *                          "in" = "query"
+ *                      },
+ *                      {
+ *                          "name" = "filepath",
+ *                          "in" = "query"
+ *                      }   
+ *                   },
+ *               }, 
+ *               "path"="/datareporting/create",
+ *               "controller"=App\Controller\Api\CreateDataReportingByUserId::class   
+ *              
+ *                  }
  *       }     
  * )
  */

@@ -16,9 +16,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class FileController extends AbstractController
 {
     #[Route('/file', name: 'app_file')]
-    public function index(): Response
+    public function index(string $inputFileName): ?array
     {   
-        $inputFileName = "../var/uploads/DatasHackaton_2022_08_03.xlsx";
+        if($inputFileName == null){
+
+            $inputFileName = "../var/uploads/DatasHackaton_2022_08_03.xlsx";        
+        }
+
         /**  Identify the type of $inputFileName  **/
         $inputFileType = \PhpOffice\PhpSpreadsheet\IOFactory::identify($inputFileName);
         /**  Create a new Reader of the type that has been identified  **/
@@ -36,6 +40,6 @@ class FileController extends AbstractController
             $dataArray[] = $spreadsheet->getSheet($i)->toArray();
         }
         
-        return new JsonResponse($dataArray);
+        return $dataArray;
     }        
 }
