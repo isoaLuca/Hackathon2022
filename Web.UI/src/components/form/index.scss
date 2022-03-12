@@ -3,7 +3,7 @@ input {
     &:focus {
         outline: none;
     }
-    &:after {
+    &::after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -19,3 +19,4 @@ input {
         }
     }
 }
+

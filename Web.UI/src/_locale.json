@@ -3,6 +3,7 @@
         "translations": {
             "title": "Wired Beauty",
             "login": "Login",
+            "send": "Send",
             "title.home.screen": "NEW ! DIFFERENT ! \n BETTER ways to research skincare Hybrid clinical trials and consumer studies",
             "webinar": "OUR WEBINAR ON ANTIOXYDATIVES - Register here ! TRUST PILOT - Best app for skin care research.",
             "navbar.what.we.do": "What we do",
@@ -81,7 +82,10 @@
             "aboutus.carous.1.content": "We focus on results with professionalism and constantly respect ethical codes.  We listen we deliver.  We help our clients succeed.",
             "aboutus.article.7.title": "Corporate responsability",
             "aboutus.article.7.content": "We respect the data regulations issued by the European Union and even top their tight regulations about consent or right to be forgotten. Our data is anonymized locally and analyzed and stored in our data centers in Europe. \nWe believe in people development and encourage diversity of opinions.We produce our devices from recycled materials and since the developement have reduced the size of our IOT devive by 40% , thus impacting transport and packaging costs. We believe and are committed for climate change and compensate our carbon emission sustaining our friensd Matthiew in his venture for a regenerative and low carbon  agriculture in France.",
-            "sciences.article.2.title": "SKIN CARE INTELLIGENCE: somme interesting articles"
+            "sciences.article.2.title": "SKIN CARE INTELLIGENCE: somme interesting articles",
+            "studies.article.1.title": "SIMILARITIES WITH MEDICAMENT PROTOCOLS",
+            "studies.article.2.title": "SKIN CARE INTELLIGENCE: somme interesting articles",
+            "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat in neque quis tincidunt"
         }
     },
     "fr": {

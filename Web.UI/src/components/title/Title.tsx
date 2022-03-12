@@ -3,9 +3,10 @@ interface ITitle {
     subName: string;
     bigTitle?: boolean;
     textWhite?: boolean;
+    textLeft?: boolean;
 }
 
-export const Title = ({ name, subName, bigTitle, textWhite }: ITitle) => {
+export const Title = ({ name, subName, bigTitle, textWhite, textLeft }: ITitle) => {
     return (
         <>
             {
@@ -18,7 +19,7 @@ export const Title = ({ name, subName, bigTitle, textWhite }: ITitle) => {
                     </>
                     :
                     <>
-                        <div className="h-1/3 w-full flex justify-start flex-col items-center">
+                        <div className={`h-1/3 w-full flex ${textLeft ? 'items-start': 'items-center'} justify-start flex-col`}>
                             <div>
                                 <h1 className="title-components font-medium uppercase text-baseColor-200 text-lg">{name}</h1>
                                 <h2 className={`subtitle-components uppercase font-bold ${textWhite ? 'text-white' : 'text-baseColor-100'} text-2xl`}>{subName}</h2>
