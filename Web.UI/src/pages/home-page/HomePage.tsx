@@ -17,7 +17,6 @@ export const HomePage = () => {
             <HomeSectionOne />
             <HomeSectionTwo />
             <HomeSectionThree />
-            <Newletter />
         </>
     )
 }

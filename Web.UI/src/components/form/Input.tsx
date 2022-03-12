@@ -5,10 +5,7 @@ export const Input = (props: InputTypes) => {
         name, 
         type,
         label,
-        placeholder,
-        disabled,
         autocomplete,
-        noLabel,
     } = props
 
     switch (type) {
@@ -36,6 +33,13 @@ export const Input = (props: InputTypes) => {
                 <div className="form-group">
                     <label htmlFor={name}>{label}</label>
                     <input type={type} />
+                </div>
+            )
+        case 'textarea':
+            return (
+                <div className="form-group row-span-2 col-span-2">
+                    <label htmlFor={name}>{label}</label>
+                    <textarea name={name} />
                 </div>
             )
 
