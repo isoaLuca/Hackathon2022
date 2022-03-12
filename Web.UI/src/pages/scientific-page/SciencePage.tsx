@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next"
 import { Article, Section } from "../../components"
 import { ImageShadow } from "../../components/article/ImageShadow";
 import { Title } from "../../components/title/Title";
+import BGA1 from '../../assets/img/bg-a1.png'
 import BGA2 from '../../assets/img/science-a2.png'
 import BGA3 from '../../assets/img/science-a3.png'
 
@@ -31,7 +32,7 @@ export const SciencePage = () => {
         <>
             <div className="h-full w-full">
                 <div className="h-screen px-24 flex justify-center items-center">
-                    <Article title={t('navbar.who.we.are')} img={'BGA1'} content={t('aboutus.article.1.title')} text={t('aboutus.article.1.content')}/>
+                    <Article title={t('navbar.who.we.are')} img={BGA1} content={t('science.article.1.title')} text={t('science.article.1.content')}/>
                 </div>
                 <div className="h-screen w-full flex justify-center items-center">
                     <div className="grid grid-cols-3 gap-3 w-8/12">

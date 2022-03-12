@@ -6,10 +6,12 @@ import HOME from '../../assets/svg/home-white.svg'
 import MAIL from '../../assets/svg/mail-white.svg'
 import PHONE from '../../assets/svg/phone-white.svg'
 import LOCA from '../../assets/svg/loca-white.svg'
+import { useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
 
     const { t } = useTranslation();
+    const navigate = useNavigate()
 
     return (
         <footer className="w-full bg-baseColor-100">
@@ -28,14 +30,14 @@ export const Footer = () => {
                                 <span className='font-bold'>Compagny</span>
                             </div>
                             <div className='flex flex-col'>
-                                <span className='mb-3'>{t('Home')}</span>
-                                <span className='mb-3'>{t('navbar.our.devices')}</span>
-                                <span className='mb-3'>{t('navbar.what.we.do')}</span>
-                                <span className='mb-3'>{t('navbar.who.we.are')}</span>
-                                <span className='mb-3'>{t('navbar.scientific.validation')}</span>
-                                <span className='mb-3'>{t('navbar.studies')}</span>
-                                <span className='mb-3'>{t('Recruitement')}</span>
-                                <span className='mb-3'>{t('Contact us')}</span>
+                                <span onClick={() => navigate('/')} className='mb-3 cursor-pointer'>{t('Home')}</span>
+                                <span onClick={() => navigate('/our-devices')} className='mb-3 cursor-pointer'>{t('navbar.our.devices')}</span>
+                                <span onClick={() => navigate('/what-we-do')} className='mb-3 cursor-pointer'>{t('navbar.what.we.do')}</span>
+                                <span onClick={() => navigate('/who-we-are')} className='mb-3 cursor-pointer'>{t('navbar.who.we.are')}</span>
+                                <span onClick={() => navigate('/scientific-validation')} className='mb-3 cursor-pointer'>{t('navbar.scientific.validation')}</span>
+                                <span onClick={() => navigate('/sutides')} className='mb-3 cursor-pointer'>{t('navbar.studies')}</span>
+                                <span onClick={() => navigate('/our-devices')} className='mb-3 cursor-pointer'>{t('Recruitement')}</span>
+                                <span onClick={() => navigate('/contact-us')} className='mb-3 cursor-pointer'>{t('Contact us')}</span>
                             </div>
                         </div>
                         <div className='w-1/2 flex flex-col'>

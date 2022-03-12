@@ -7,6 +7,7 @@ import { Modal } from '../modal/Modal';
 import Avatar from '../../assets/svg/person-outline.svg';
 import UK from '../../assets/svg/uk.svg';
 import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 interface INavbarElements {
     name: string;
@@ -22,8 +23,9 @@ export const Navbar = () => {
     const { t } = useTranslation()
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const isConnected = true
     const username = 'John Doe'
+
+    const [isConnected, setIsConnected] = React.useState(false)
 
     const inputsLogin: InputTypes[] = [
         {
@@ -57,6 +59,7 @@ export const Navbar = () => {
     }]
 
     const handleModalLogin = () => {
+        setIsConnected(true)
         dispatch({
             type: ModalActionType.OPEN,
             payload: {

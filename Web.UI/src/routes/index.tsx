@@ -8,11 +8,11 @@ import { SciencePage } from '../pages/scientific-page/SciencePage'
 import { StudiesPage } from '../pages/studies-page/Studies'
 
 export default function MyRoutes() {
+    const isAuthenticated = localStorage.getItem('isAuthenticated')
     return (
       <div className='container-routes'>
           <Routes>
-            Route: <Route path="/admin" element={<BackOffice />} />
-            Route: <Route path="/login" element={<Login />} />
+            Route: <Route path="/admin" element={<BackOffice />}/>
             Route: <Route path="/" element={<HomePage />} />
             Route: <Route path="/what-we-do" element={<AboutPage />} />
             Route: <Route path="/our-devices" element={<DevicePage />} />
