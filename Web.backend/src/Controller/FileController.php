@@ -31,9 +31,11 @@ class FileController extends AbstractController
            $sheetnames = $spreadsheet->getSheetNames();
         }
         /**  Convert Spreadsheet Object to an Array for ease of use  **/
-
-        $arra1 = $spreadsheet->getSheet(1)->toArray();
+        $dataArray = array();
+        for($i = 0; $i<$count ;$i++){
+            $dataArray[] = $spreadsheet->getSheet($i)->toArray();
+        }
         
-        return new JsonResponse($arra1);
+        return new JsonResponse($dataArray);
     }        
 }
